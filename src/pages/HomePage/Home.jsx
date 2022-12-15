@@ -24,7 +24,7 @@ export const Home = () => {
             <div className=" col-12 md:col-6 lg:col-3">
                 <Link to="/meet">
                     <div className="h-20rem surface-0 hoover:bg-red-300  shadow-2 p-3 border-1 border-50 border-round">
-                            <div className="flex  justify-content-center mb-3">
+                            <div className="flex  justify-content-center mb-7">
                                 <div className="">
                                 <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/768px-Google_Meet_icon_%282020%29.svg.png" alt="Image" width="250" />
                                 </div>
@@ -58,6 +58,9 @@ export const Home = () => {
                 </Link>
             </div>
         </div>  
+        <div className="h-17rem">
+
+        </div>
     </Container>
       );
 };

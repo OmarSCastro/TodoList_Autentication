@@ -172,7 +172,7 @@ export const ZoomPage = () => {
                       <p>Aunque la aplicación no requiere de una cámara para funcionar es importante contar con una
                         ya que el aplicativo tiene el alcance de poder tomar tu rostro y poderlo mostrar en tiempo real en la llamada
                       </p>
-                      <p className="text-center">¿Zoom no detecta tu c+amara?</p>
+                      <p className="text-center">¿Zoom no detecta tu cámara?</p>
                       <p className="text-center">Mira el siguiente video</p>
                       <div className="flex justify-content-center pt-3">
                       <VideoExample url="https://www.youtube.com/watch?v=-16nRwlpDIM" />

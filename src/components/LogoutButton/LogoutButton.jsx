@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 export const LogoutButton = () => {
 
   
-  const nombre = localStorage.getItem( 'nombre' );
+  const nombre = localStorage.getItem( 'nombre' ).slice(1,-1);
 
   const navigate = useNavigate();
 
@@ -15,11 +15,10 @@ export const LogoutButton = () => {
     navigate('/');
   }
 
-    
-  return (
+    return (
     <>
           <div className='flex'>
-              <p className='pr-3'> {nombre} </p>
+              <p className='pr-3'> ! Hola {nombre} !</p>
               <Avatar icon="pi pi-user" className="mr-2" size="large" />
               <Button icon="pi pi-power-off" className="p-button-text p-button-lg" onClick={action}/>
           </div>

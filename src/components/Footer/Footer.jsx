@@ -8,7 +8,7 @@ export const Footer = () => {
     <div className="bg-bluegray-900 text-gray-100 p-2 flex justify-content-center flex-wrap layout-footerk">
       El desarrollo de este aplicativo se basa en la entrega del proyecto en el 
       segundo parcial de la asignatura Aplicación de Redes, secuencia 4NV81, 
-      profesor: Meneses Gonzalez Raymundo
+      profesor: Meneses González Raymundo
     </div>
     </div>
   );

@@ -153,8 +153,8 @@ export const MeetPage = () => {
                             </div>
                     </div>
                     <Dialog header="Cuenta de Google" visible={displayCuenta} style={{ width: '50vw' }} footer={renderFooter('cuenta')} onHide={()=> onHide('cuenta')}>
-                      <p>Meet es una herramienta propia de Google, al ser asi el unico requisito que necesitas es tener una cuenta con ellos
-                        De esta manera google puede identificar tu nombre e información de contacto.
+                      <p>Meet es una herramienta propia de Google, al ser asi el único requisito que necesitas es tener una cuenta con ellos
+                       . De esta manera google puede identificar tu nombre e información de contacto.
                       </p>
                       <p className="text-center">¿Quieres saber crear una cuenta en Google?</p>
                       <p className="text-center">Mira el siguiente video</p>
@@ -176,8 +176,8 @@ export const MeetPage = () => {
                             </div>
                     </div>
                     <Dialog header="Sistema Operativo" visible={displaySistema} style={{ width: '50vw' }} footer={renderFooter('sistema')} onHide={()=> onHide('sistema')}>
-                      <p>El sistema operativo que se cuente en el dispositivo es importante para la compatibilidad
-                        Algunos sistemas operativos compatibles son: Ubuntu, MacOS, Windows
+                      <p>El sistema operativo que se cuente en el dispositivo es importante para la compatibilidad.
+                        Algunos sistemas operativos compatibles son:  MacOS y Windows
                       </p>
                       <p className="text-center">¿Quieres saber que sistema operativo tienes?</p>
                       <p className="text-center">Mira el siguiente video</p>
@@ -243,7 +243,7 @@ export const MeetPage = () => {
                                 <Image src="https://flaticons.net/icon.php?slug_category=gadgets&slug_icon=webcam" alt="Image" width="190" />
                                 </div>
                             </div>
-                            <label className="flex justify-content-center" htmlFor="">Conexión a Internet</label>
+                            <label className="flex justify-content-center" htmlFor="">Camara web</label>
                             <div className="flex justify-content-center pt-4">
                               <Button label="Ver más" icon="pi pi-check" onClick={() => onClick('camara')} />
                             </div>
@@ -252,10 +252,10 @@ export const MeetPage = () => {
                       <p>Aunque la aplicación no requiere de una cámara para funcionar es importante contar con una
                         ya que el aplicativo tiene el alcance de poder tomar tu rostro y poderlo mostrar en tiempo real en la llamada
                       </p>
-                      <p className="text-center">¿Zoom no detecta tu c+amara?</p>
+                      <p className="text-center">¿Meet no detecta tu cámara?</p>
                       <p className="text-center">Mira el siguiente video</p>
                       <div className="flex justify-content-center pt-3">
-                      <VideoExample url="https://www.youtube.com/watch?v=-16nRwlpDIM" />
+                      <VideoExample url="https://www.youtube.com/watch?v=-bX8aGQBkkY" />
                       </div>
                     </Dialog>
             </div>  

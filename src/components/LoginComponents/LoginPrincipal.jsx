@@ -36,7 +36,7 @@ export const LoginPrincipal = () => {
                   <Image src="https://i0.wp.com/www.udual.org/principal/wp-content/uploads/2021/10/unnamed-1.jpg?fit=900%2C900&ssl=1" alt="Image" width="250" />
                 </div>
               </div>
-              <div className="text-900 text-3xl font-medium mb-3">Bienvenido Profesor</div>
+              <div className="text-900 text-3xl font-medium mb-3">Bienvenido </div>
             </div>
               <label htmlFor="username" className="block text-900 font-medium mb-2">Ingresa tu nombre</label>
               <InputText placeholder="Nombre" id="username" className="w-full mb-3" value={userValue} onChange={(e) => setUserValue(e.target.value)}/>
