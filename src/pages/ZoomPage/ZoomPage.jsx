@@ -9,7 +9,6 @@ import {
 } from "../../components";
 import { Container } from "../../components/Container/Container";
 import { Image } from 'primereact/image';
-import { Link } from "react-router-dom";
 import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 
@@ -18,10 +17,10 @@ export const ZoomPage = () => {
   const title = 'Zoom';
   const type = 'Aplicación de software de videoconferencia.';
   const propositoText = 'Permite interactuar virtualmente con los compañeros de trabajo cuando no es posible celebrar reuniones en persona, y también ha tenido un gran éxito en los eventos sociales.';
-  const systems = 'MacOS, Linux, Windows';
   const images = ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Windows_logo_-_2012.png/800px-Windows_logo_-_2012.png',
                   'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/MacOS_logo_%282017%29.svg/2060px-MacOS_logo_%282017%29.svg.png',
                   'https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png']
+  const image = "https://www.unav.edu/documents/5502999/0/Zoom-Logo.png/c0dcc00b-5751-63d0-4902-350d26c4fbb7";
   
   
   const urlImage= 'https://lifeinbits.net/wp-content/uploads/2022/04/2021-pug-zoom-blog-final-release.jpeg';
@@ -60,7 +59,6 @@ export const ZoomPage = () => {
       default:
         break;
     }
-    setDisplayInternet(true);
   }
 
   const renderFooter = (name) => {
@@ -80,7 +78,7 @@ export const ZoomPage = () => {
         </div>
 
         <div className="">
-          <QueEsComponent texto={text} />
+          <QueEsComponent texto={text} image={image} />
           
         </div>
 
@@ -110,8 +108,8 @@ export const ZoomPage = () => {
 
         <div className="pt-5">
           <p className="pl-3 text-2xl font-medium">Requisitos del Sistema</p>
-          <div className="flex justify-content-around">
-            <div className=" col-12 md:col-6 lg:col-3 ">
+          <div className="flex justify-content-around pt-3">
+            <div className=" col-12 md:col-6 lg:col-3 border-2 border-white border-round">
                     <div className="h-20rem surface-0 hoover:bg-red-300  shadow-2  border-1 border-50 border-round">
                             <div className="flex  justify-content-center ">
                                 <div className="">
@@ -120,7 +118,7 @@ export const ZoomPage = () => {
                             </div>
                             <label className="flex justify-content-center" htmlFor="">Conexión a Internet</label>
                             <div className="flex justify-content-center pt-4">
-                              <Button label="Ver más" icon="pi pi-check" onClick={() => onClick('displayBasic')} />
+                              <Button label="Ver más" icon="pi pi-check" onClick={() => onClick('internet')} />
                             </div>
                     </div>
                     <Dialog header="Conexión a Internet" visible={displayInternet} style={{ width: '50vw' }} footer={renderFooter('internet')} onHide={()=> onHide('internet')}>
@@ -134,7 +132,7 @@ export const ZoomPage = () => {
                       </div>
                     </Dialog>
             </div>  
-            <div className=" col-12 md:col-6 lg:col-3 ">
+            <div className=" col-12 md:col-6 lg:col-3 border-2 border-white border-round">
                     <div className="h-20rem surface-0 hoover:bg-red-300  shadow-2 p-3 border-1 border-50 border-round">
                             <div className="flex  justify-content-center mb-3">
                                 <div className="">
@@ -143,103 +141,100 @@ export const ZoomPage = () => {
                             </div>
                             <label className="flex justify-content-center" htmlFor="">Altavoces y Microfono</label>
                             <div className="flex justify-content-center pt-4">
-                              <Button label="Ver más" icon="pi pi-check" onClick={() => onClick('displayBasic')} />
+                              <Button label="Ver más" icon="pi pi-check" onClick={() => onClick('bocinas')} />
                             </div>
                     </div>
-                    <Dialog header="Altavoces y Microfono" visible={displayInternet} style={{ width: '50vw' }} footer={renderFooter('bocinas')} onHide={()=> onHide('bocinas')}>
+                    <Dialog header="Altavoces y Microfono" visible={displayBocinas} style={{ width: '50vw' }} footer={renderFooter('bocinas')} onHide={()=> onHide('bocinas')}>
                       <p>Un requisito escencial para esta plataforma es el contar con bocinas y micrófono
-                        Al ser una herramienta en linea es indispensable tener una buena conexión a internet
+                        Con el correcto funcionamiento de estas herramientas podremos disfrutar de una 
+                        videollamada de la mejor calidad
                       </p>
-                      <p className="text-center">¿Quieres saber la velocidad de tu internet?</p>
+                      <p className="text-center">¿Quieres verificar el correcto funcionamiento de tu microfonot?</p>
                       <p className="text-center">Mira el siguiente video</p>
                       <div className="flex justify-content-center pt-3">
-                      <VideoExample url="https://www.youtube.com/watch?v=AdqzwvZyj2o" />
+                      <VideoExample url="https://www.youtube.com/watch?v=1tnrEhqWXJs" />
                       </div>
                     </Dialog>
             </div>  
-            <div className=" col-12 md:col-6 lg:col-3 ">
+            <div className=" col-12 md:col-6 lg:col-3 border-2 border-white border-round">
                     <div className="h-20rem surface-0 hoover:bg-red-300  shadow-2 p-3 border-1 border-50 border-round">
                             <div className="flex  justify-content-center mb-3">
                                 <div className="">
-                                <Image src="https://static.vecteezy.com/system/resources/previews/009/391/790/original/internet-wifi-icon-clipart-design-illustration-free-png.png" alt="Image" width="250" />
+                                <Image src="https://flaticons.net/icon.php?slug_category=gadgets&slug_icon=webcam" alt="Image" width="190" />
                                 </div>
                             </div>
                             <label className="flex justify-content-center" htmlFor="">Conexión a Internet</label>
                             <div className="flex justify-content-center pt-4">
-                              <Button label="Ver más" icon="pi pi-check" onClick={() => onClick('displayBasic')} />
+                              <Button label="Ver más" icon="pi pi-check" onClick={() => onClick('camara')} />
                             </div>
                     </div>
-                    <Dialog header="Conexión a Internet" visible={displayInternet} style={{ width: '50vw' }} footer={renderFooter('displayBasic')} onHide={onHide}>
-                      <p>La conexión a internet es de suma importancia para poder utilizar la plataforma.
-                        Al ser una herramienta en linea es indispensable tener una buena conexión a internet
+                    <Dialog header="Camara web" visible={displayCamara} style={{ width: '50vw' }} footer={renderFooter('camara')} onHide={()=> onHide('camara')}>
+                      <p>Aunque la aplicación no requiere de una cámara para funcionar es importante contar con una
+                        ya que el aplicativo tiene el alcance de poder tomar tu rostro y poderlo mostrar en tiempo real en la llamada
                       </p>
-                      <p className="text-center">¿Quieres saber la velocidad de tu internet?</p>
+                      <p className="text-center">¿Zoom no detecta tu c+amara?</p>
                       <p className="text-center">Mira el siguiente video</p>
                       <div className="flex justify-content-center pt-3">
-                      <VideoExample url="https://www.youtube.com/watch?v=AdqzwvZyj2o" />
+                      <VideoExample url="https://www.youtube.com/watch?v=-16nRwlpDIM" />
                       </div>
                     </Dialog>
             </div>  
+          </div>  
+        </div>
+
+          <p className=" pt-4 pl-2 text-3xl font-semibold">Funcionalidades</p>
+        <div className=" p-2 flex align-items-center">
+          <div className="w-5 mr-7">
+            <ol>
+              <li className="text-xl">
+                Reuniones individuales: Organiza reuniones individuales ilimitadas
+                incluso con el plan gratuito.
+              </li>
+              <br />
+              <li className="text-xl">
+                Videoconferencias de grupo: Organiza hasta 500 participantes (si
+                adquieres el complemento "reunión grande"). El plan gratuito, sin
+                embargo, te permite organizar videoconferencias de hasta 40
+                minutos y hasta 100 participantes.
+              </li>
+              <br />
+              <li className="text-xl">
+                Pantalla compartida: Reúnete uno a uno o con grupos grandes y
+                comparte tu pantalla con ellos para que puedan ver lo que tú ves.
+              </li>
+              <br />
+              <li className="text-xl">Grabación: También puedes grabar tus reuniones o eventos.</li>
+            </ol>
           </div>
-          <ul>
-            <li>
-              Conexión a Internet: banda ancha con cable o inalámbrica (3G o
-              4G/LTE)
-            </li>
-            <li>
-              Altavoces y un micrófono: integrados, con complemento USB o
-              Bluetooth inalámbricos
-            </li>
-            <li>
-              Cámara web o cámara web HD: integrada, con complemento USB o:
-            </li>
+          <VideoExample url="https://www.youtube.com/watch?v=7b9KMPC4R2M" />
+        </div>
+
+        <div className=" p-7 flex justify-content-center">
+          <div className="">
+            <p className="text-4xl">¿Quien lo puede usar?</p>
             <ul>
-              <li>
-                Una cámara HD o videocámara HD con tarjeta de captura de vídeo
-              </li>
-              <li>
-                Software de cámara virtual para su uso con software de
-                transmisión como cámaras OBS o IP
-              </li>
+              <li className="text-xl">Personas para sus reuniones personales</li>
+              <br />
+              <li className="text-xl">Estudiantes</li>
+              <br />
+              <li className="text-xl">Docentes</li>
+              <br />
+              <li className="text-xl">Pequeñas, medianas y grandes empresas</li>
+              <br />
+              <li className="text-xl">Equipos de trabajo</li>
+              <br />  
+              <li className="text-xl">Cualquier persona que quiera una videollamada en grupo</li>
             </ul>
-          </ul>
+          </div>
         </div>
 
-        <div>
-          <p>Funcionalidades</p>
-          <ol>
-            <li>
-              Reuniones individuales: Organiza reuniones individuales ilimitadas
-              incluso con el plan gratuito.
-            </li>
-            <li>
-              Videoconferencias de grupo: Organiza hasta 500 participantes (si
-              adquieres el complemento "reunión grande"). El plan gratuito, sin
-              embargo, te permite organizar videoconferencias de hasta 40
-              minutos y hasta 100 participantes.
-            </li>
-            <li>
-              Pantalla compartida: Reúnete uno a uno o con grupos grandes y
-              comparte tu pantalla con ellos para que puedan ver lo que tú ves.
-            </li>
-            <li>Grabación: También puedes grabar tus reuniones o eventos.</li>
-          </ol>
-        </div>
-
-        <div>
-          <p>¿Quien lo puede usar?</p>
-          <ul>
-            <li>Personas para sus reuniones personales</li>
-            <li>Estudiantes</li>
-            <li>Docentes</li>
-            <li>Pequeñas, medianas y grandes empresas</li>
-            <li>Equipos de trabajo</li>
-            <li>Cualquier persona que quiera una videollamada en grupo</li>
-          </ul>
-        </div>
-
-        <div className="flex justify-content-center">
-          <VideoExample url="https://www.youtube.com/watch?v=eXYOk2O3vRA" />
+        <div className=" flex pt-6 justify-content-center ">
+          <div className=" border-2 border-white w-8 ">
+            <p className="text-center pb-4 text-4xl font-semibold">Te dejamos un pequeño tutorial para conocer su funcionamiento</p>
+            <div className="pt-2 flex justify-content-center pb-6">
+              <VideoExample url="https://www.youtube.com/watch?v=eXYOk2O3vRA" />
+            </div>
+          </div>
         </div>
       </div>
     </Container>
