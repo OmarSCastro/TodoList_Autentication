@@ -20,46 +20,19 @@ export const AboutUsPage = () => {
           </div>
             <Image src="https://onceninasyninos.tv/wp-content/uploads/2018/04/Banner-logos-ipn-e1523046221576.png" width="400"  alt="Image Text" />
          </div>
-
-         <p className='border-white border-2 text-center text-3xl font-semibold'>Equipo de Trabajo</p>
          <div>
 
-          <div className='flex justify-content-around pt-4'>
-            <div className=''>
-              <Image src='https://github.com/OmarSCastro/CAPU_V2/blob/master/assets/Ivan.jpeg?raw=true' alt="Image"  width="320"  />
-              <p className='text-center text-xl'>Herrera Rivera Ivan </p>
-              <p className='text-center text-xl'>2019601766</p>
-            </div>
-
-            <div>
-              <Image src='https://github.com/OmarSCastro/CAPU_V2/blob/master/assets/Arturo.jpeg?raw=true' alt="Image"  width="275"/>
-              <p className='text-center text-xl'>Hernández Moreno Arturo </p>
-              <p className='text-center text-xl'>2019601953</p>
-            </div>
-
-            <div>
-              <Image src='https://github.com/OmarSCastro/CAPU_V2/blob/master/assets/Luis.jpeg?raw=true' alt="Image"  width="300"  />
-              <p className='text-center text-xl'>Flores Gervacio Luis Andres  </p>
-              <p className='text-center text-xl'>2015140232</p>
-            </div>
-
-            <div>
-              <Image src='https://github.com/OmarSCastro/CAPU_V2/blob/master/assets/Omar%20-%20copia.jpg?raw=true' alt="Image"  width="410"  />
-              <p className='text-center text-xl'>Sánchez Castro Omar </p>
-              <p className='text-center text-xl'>2013140474</p>
-            </div>
-
-
-          </div>
-
+       
+          
           <p className='border-white border-2 text-center text-3xl font-semibold mt-8'>Informacrón de asignatura</p>
          <div className='justify-content-center flex'>
           <div>
 
-          <p className='text-xl '> <span className='underline text-3xl text-semibold mr-2'>Materia:</span> Aplicación de Redes</p>
-          <p className='text-xl '> <span className='underline text-3xl text-semibold mr-2'>Secuencia:</span> 4NV81</p>
-          <p className='text-xl '> <span className='underline text-3xl text-semibold mr-2'>Secuencia:</span> Ing. Raymundo Meneses González</p>
-          <p className='text-xl '> <span className='underline text-3xl text-semibold mr-2'>Proyecto:</span>  Aplicativo propuesto para segundo parcial</p>
+          <p className='text-xl '> <span className='underline text-3xl text-semibold mr-2'>Materia:</span> Ingeniería de Pruebas</p>
+          <p className='text-xl '> <span className='underline text-3xl text-semibold mr-2'>Secuencia:</span> 5NM71</p>
+          <p className='text-xl '> <span className='underline text-3xl text-semibold mr-2'>Secuencia:</span> López Ávila Saul</p>
+          <p className='text-xl '> <span className='underline text-3xl text-semibold mr-2'>Proyecto:</span>  CAPU</p>
+          <p className='text-xl '> <span className='underline text-3xl text-semibold mr-2'>Alumno:</span>  Sánhcez Castro Omar</p>
 
           </div>
          </div>
