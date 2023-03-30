@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "primereact/button";
 import { Image } from "primereact/image";
 import { InputText } from "primereact/inputtext";
@@ -6,30 +6,19 @@ import { useNavigate } from 'react-router-dom';
 
 export const LoginPrincipal = () => {
 
-  useEffect(() => {
-    seedUsuarios();
-  }, []);
-  const usuarios = ['Omar', 'Saul']
-  const seedUsuarios = () => {
-    localStorage.setItem('usuarios', usuarios);
-  };
-
   const navigate = useNavigate();
 
   const [userValue, setUserValue] = useState(''); //Aqui se almacenará el valor del correo de usuario
 
   const fetchData = async () => {
 
-    //const usuarios = localStorage.getItem( 'usuarios' ).slice(1,-1);
-    const usuarios = localStorage.getItem( 'usuarios' );
-
-      //if (userValue.length > 2) {
-      //  localStorage.setItem('nombre', JSON.stringify(userValue));
-      //  navigate('/homepage');
-      //} else {
-      //  document.getElementById("msj_error").innerText= "Ingresa un nombre válido";
-      //  setUserValue("");
-      //} 
+      if (userValue === 'Omar' || userValue === 'Saul') {
+            localStorage.setItem('nombre', JSON.stringify(userValue));
+            navigate('/homepage');
+      }else {
+          document.getElementById("msj_error").innerText= "Nombre de usuario inválido";
+          setUserValue("");
+      } 
   }
 
   const handleSubmit = ( e ) => {
