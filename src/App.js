@@ -11,13 +11,10 @@ import '/node_modules/primeflex/primeflex.css';
 
 //Importaciones de componentes y paginas
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./pages/HomePage/Home";
 import { Login } from "./pages/LoginPage/Login";
-import { ClassPage } from "./pages/ClassPage/ClassPage";
-import { MeetPage } from "./pages/MeetPage/MeetPage";
-import { TeamsPage } from "./pages/TeamsPage/TeamsPage";
-import { ZoomPage } from "./pages/ZoomPage/ZoomPage";
-import { AboutUsPage } from "./pages/AboutUsPage/AboutUsPage";
+import {TodoPage} from './pages/TodoPage/TodoPage';
+import { ValidProvider } from './context/ValidProvider';
+
 
 function App() {
   return (
@@ -25,26 +22,10 @@ function App() {
     <Route path="/" element={<Login />} />
 
     <Route path="/homepage" element={
-        <Home />
-    } />
-    <Route path="/aboutus" element={
-        <AboutUsPage />
-    } />
-
-    <Route path="/meet" element={
-        <MeetPage />
-      
-    } />
-
-    <Route path="/classroom" element={
-          <ClassPage />
-    } />
-
-    <Route path="/teams" element={
-          <TeamsPage />
-    } />
-    <Route path="/zoom" element={
-          <ZoomPage />
+      <ValidProvider>
+        <TodoPage />
+      </ValidProvider>
+//        <Home />
     } />
   </Routes>
   );

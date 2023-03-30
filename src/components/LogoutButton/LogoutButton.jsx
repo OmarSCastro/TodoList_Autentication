@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Button } from 'primereact/button';
 import { Avatar } from 'primereact/avatar';
 import { useNavigate } from 'react-router-dom';
@@ -12,6 +12,7 @@ export const LogoutButton = () => {
 
   const action = () => {
     localStorage.removeItem("nombre");
+    localStorage.removeItem("usuarios");
     navigate('/');
   }
 
